@@ -114,13 +114,14 @@ if __name__ == "__main__":
     current_player = pick_random_player()
     game_decided = False
     available_moves = calculate_available_moves(board)
-    player_text = "PLAYER " + players[current_player]['name'] + " (" + players[current_player]['character'] + ")"
+
 
     print_game_screen(board)
 
     while not game_decided:
 
         print('Pick one of the following: ' + str(available_moves))
+        player_text = "PLAYER " + players[current_player]['name'] + " (" + players[current_player]['character'] + ")"
         move = input(player_text + " - pick move position: ")
 
         while int(move) not in available_moves:
